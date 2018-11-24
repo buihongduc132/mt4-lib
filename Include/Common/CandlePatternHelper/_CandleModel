@@ -1,0 +1,37 @@
+//+------------------------------------------------------------------+
+//|                                          _CandlePatternUtils.mqh |
+//|                        Copyright 2018, MetaQuotes Software Corp. |
+//|                                             https://www.mql5.com |
+//+------------------------------------------------------------------+
+#property copyright "Copyright 2018, MetaQuotes Software Corp."
+#property link      "https://www.mql5.com"
+#property version   "1.00"
+#property strict
+//+------------------------------------------------------------------+
+//|                                                                  |
+//+------------------------------------------------------------------+
+class CandlePatternUtils
+  {
+private:
+   string            _symbol;
+   ENUM_TIMEFRAMES   _timeframe;
+public:
+                     CandlePatternUtils(string symbol,ENUM_TIMEFRAMES timeframe);
+                    ~CandlePatternUtils();
+   double            High();
+  };
+//+------------------------------------------------------------------+
+//|                                                                  |
+//+------------------------------------------------------------------+
+CandlePatternUtils::CandlePatternUtils(string symbol,ENUM_TIMEFRAMES timeframe)
+  {
+   _symbol=symbol;
+   _timeframe=timeframe;
+  }
+//+------------------------------------------------------------------+
+//|                                                                  |
+//+------------------------------------------------------------------+
+CandlePatternUtils::~CandlePatternUtils()
+  {
+  }
+//+------------------------------------------------------------------+
